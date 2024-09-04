@@ -7,6 +7,8 @@ import certifi
 from pymongo import MongoClient
 import bcrypt
 
+
+
 app = Flask(__name__)
 
 client = MongoClient("mongodb+srv://myAtlasDBUser:Sai123@myatlasclusteredu.qifwasp.mongodb.net/UserPython?retryWrites=true&w=majority",
@@ -20,6 +22,9 @@ app.config['MAIL_PASSWORD'] = 'rvvo vkfi hepj ytfl'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 mail = Mail(app)
+
+
+
 
 @app.route("/", methods=['GET'])
 def home():
